@@ -1,18 +1,18 @@
-# Python-student-management-system
+# Python student management system
 
-This is a student management system built with python that helps to organize, analyze and manage the records of students. It has built-in subjects including
+This is a student management system built with Python that helps users organize, analyze and manage the records of students. It has built-in subjects including:
 English Language, Core Mathematics, Social Studies, Physics, Chemistry, Biology, Additional Mathematics, and ICT.
 
-Features
-- Opens a CSV file containing the records of students
-- Adds the record of students, including automatic grading
-- Updates the information of students
-- Removes student from the records
-- Shows the name of students added
-- Finds the record of students
-- Saves the information as a CSV file
+## Features
+- Loads student records from a CSV file
+- Adds student records and calculates grades automatically
+- Updates student records
+- Removes a student from the records
+- Displays the names of students in the list
+- Searches for student records by name
+- Saves student records as a CSV file
 
-Technologies Used
+## Technologies Used
 - CSV module
 - Conditions
 - Lists and dictionaries
@@ -20,7 +20,7 @@ Technologies Used
 - Functions and loops
 - Error handling
 
-Preview of starting screen
+## Preview of the starting screen
 
 ==============Student Management System==============
 
@@ -38,5 +38,5 @@ Your choice:
 
 =====================================================
 
-Author
+## Author
 Created as a Python programming project to practise application development and data management.
