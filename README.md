@@ -1,4 +1,4 @@
-# python-student-management-system
+# Python-student-management-system
 
 This is a student management system built with python that helps to organize, analyze and manage the records of students. It has built-in subjects including
 English Language, Core Mathematics, Social Studies, Physics, Chemistry, Biology, Additional Mathematics, and ICT.
