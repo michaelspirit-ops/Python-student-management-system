@@ -14,6 +14,7 @@ English Language, Core Mathematics, Social Studies, Physics, Chemistry, Biology,
 
 ## Technologies Used
 - CSV module
+- Tabulate module 
 - Conditions
 - Lists and dictionaries
 - File handling
