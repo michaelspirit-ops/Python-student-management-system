@@ -24,7 +24,7 @@ def main():
 
         match choice:
             case "1":
-                view_list(records)
+                records = view_list(records)
             case "2":
                 records = add_student(records)
             case "3":
@@ -51,13 +51,32 @@ def main():
 # view the names of students in the list
 def view_list(me):
     if me:
-        subjects = [ "English language", "Science", "Core Mathematics", "Social studies", "Chemistry", "Biology", "Physics", "ICT"]
-        
+        removed_values = {}
+        new_list = []
+
+        subjects = [
+            "English language",
+            "Science",
+            "Core Mathematics",
+            "Social studies",
+            "Chemistry",
+            "Biology",
+            "Physics",
+            "ICT",
+        ]
+
         for student in me:
             for subject in subjects:
-                student.pop(subject)
-        
+                subject_value = student.pop(subject)
+                removed_values.update({f"{subject}": subject_value})
+
+            removed_values.update({"Name": student["Name"], "Grade": student["Grade"]})
+            new_list.append(removed_values)
+            removed_values = {}
+
         print(tabulate(me, headers="keys", tablefmt="grid"))
+
+        return new_list
     else:
         print("\nList is empty")
 
@@ -155,7 +174,7 @@ def find_student(here):
                 sep="\n",
             )
             print("-----------------------------------------------------")
-            
+
             found = True
 
     if not found:
@@ -164,7 +183,12 @@ def find_student(here):
 
 # update the records of a student
 def update_info(here):
-    name = input("\nWhat's the name of the student to update his or her records? ").strip().title()
+    name = (
+        input("\nWhat's the name of the student to update his or her records? ")
+        .strip()
+        .title()
+    )
+    print()
     found = False
 
     for search in here:
@@ -181,7 +205,7 @@ def update_info(here):
         if str(value).isnumeric():
             while True:
                 try:
-                    score = int(input(f"\nEnter score for {subject}: ").strip())
+                    score = int(input(f"Enter score for {subject}: ").strip())
 
                     if 0 <= score <= 100:
                         record[subject] = score
