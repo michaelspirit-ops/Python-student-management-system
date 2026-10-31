@@ -1,4 +1,5 @@
 import csv
+from tabulate import tabulate
 
 
 # the main menu
@@ -50,12 +51,13 @@ def main():
 # view the names of students in the list
 def view_list(me):
     if me:
-        print("\n----------------------Students-----------------------")
-
+        subjects = [ "English language", "Science", "Core Mathematics", "Social studies", "Chemistry", "Biology", "Physics", "ICT"]
+        
         for student in me:
-            print(student.get("Name", ""))
-
-        print("-----------------------------------------------------")
+            for subject in subjects:
+                student.pop(subject)
+        
+        print(tabulate(me, headers="keys", tablefmt="grid"))
     else:
         print("\nList is empty")
 
