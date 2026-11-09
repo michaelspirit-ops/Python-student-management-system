@@ -162,15 +162,15 @@ def find_student(here):
             print("\n-----------------------------------------------------", end="")
             print(
                 "\n" f"Name: {find}",
-                f"English language: {student["English language"]}",
-                f"Science: {student["Science"]}",
-                f"Core Mathematics: {student["Core Mathematics"]}",
-                f"Social studies: {student["Social studies"]}",
-                f"Chemistry: {student["Chemistry"]}",
-                f"Biology: {student["Biology"]}",
-                f"Physics: {student["Physics"]}",
-                f"ICT: {student["ICT"]}",
-                f"Grade: {student["Grade"]}",
+                f"English language: {student['English language']}",
+                f"Science: {student['Science']}",
+                f"Core Mathematics: {student['Core Mathematics']}",
+                f"Social studies: {student['Social studies']}",
+                f"Chemistry: {student['Chemistry']}",
+                f"Biology: {student['Biology']}",
+                f"Physics: {student['Physics']}",
+                f"ICT: {student['ICT']}",
+                f"Grade: {student['Grade']}",
                 sep="\n",
             )
             print("-----------------------------------------------------")
